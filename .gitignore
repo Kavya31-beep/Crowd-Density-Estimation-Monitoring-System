@@ -1,0 +1,12 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.vscode/
+logs/
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+*.pt
+*.pth

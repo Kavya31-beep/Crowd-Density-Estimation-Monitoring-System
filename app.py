@@ -19,7 +19,27 @@ BLACK_MEAN = 8          # frames darker than this (average pixel value) are skip
 ALARM_COOLDOWN_S = 30   # in loop mode, do not re-ring the alarm more often than this
 
 st.set_page_config(page_title="Crowd Density Monitor", layout="wide")
-st.title("Automated Crowd Density Estimation & Management System")
+st.markdown(
+    """
+<style>
+.block-container {padding-top: 1.5rem; max-width: 1400px;}
+.hero {padding: 1.2rem 1.6rem; border-radius: 14px; margin-bottom: 1rem; color: #fff;
+       background: linear-gradient(135deg, #1D4ED8 0%, #0EA5E9 100%);}
+.hero h1 {margin: 0; padding: 0; font-size: 1.6rem; color: #fff;}
+.hero p {margin: .3rem 0 0; opacity: .9; font-size: .95rem;}
+[data-testid="stMetric"] {background: rgba(128,128,128,.12); border: 1px solid rgba(128,128,128,.25);
+                          padding: .8rem 1rem; border-radius: 12px;}
+[data-testid="stMetricValue"] {font-size: 2rem; font-weight: 700;}
+[data-testid="stImage"] img {border-radius: 12px;}
+div[data-testid="stAlert"] {border-radius: 12px;}
+</style>
+<div class="hero">
+  <h1>Crowd Density Monitor</h1>
+  <p>Automated crowd density estimation &amp; management system · Group 8</p>
+</div>
+""",
+    unsafe_allow_html=True,
+)
 
 
 @st.cache_resource(show_spinner="Loading models...")
